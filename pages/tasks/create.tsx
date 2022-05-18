@@ -14,8 +14,8 @@ const TaskCreate: FC<TaskCreateProps> = () => {
       (project) => project.id === projectId
     ).title
 
-    const project = { id: projectId, title: projectTitle }
-    const newTask = { title, description, project }
+    const project_attributes = { id: projectId, title: projectTitle }
+    const newTask = { title, description, project_attributes }
     console.log(JSON.stringify(newTask))
 
     fetch('http://localhost:3000/tasks', {
