@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import { EventHandler, FC, FormEvent, useEffect, useState } from 'react'
-import type { Task, Project } from '../../types/types'
+import { FC, FormEvent, useEffect, useState } from 'react'
+import type { Project } from '../../types/types'
 
 interface TaskCreateProps {}
 

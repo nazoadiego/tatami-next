@@ -22,7 +22,7 @@ const TestsPage: NextPage = () => {
       <h2 className="text-4xl text-white">Tasks</h2>
       <div className="mt-10 grid grid-cols-3 gap-3">
         {tests.map((test) => (
-          <Link href={`test_rails/${test.id}`} key={test.id}>
+          <Link href={`/test_rails/${test.id}`} key={test.id}>
             <a>
               <div className="space-y-3 rounded-lg bg-[#ffef77] p-8">
                 <h5 className="text-4xl">{test.title}</h5>

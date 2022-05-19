@@ -2,9 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { Task } from '../../types/types'
 
-const Home: NextPage = () => {
-  const [tasks, setTasks] = useState([])
+const TasksPage: NextPage = () => {
+  const [tasks, setTasks] = useState<Task[]>([])
 
   useEffect(() => {
     fetch('http://localhost:3000/tasks')
@@ -23,11 +24,15 @@ const Home: NextPage = () => {
       <h2 className="text-4xl text-white">Tasks</h2>
       <div className="mt-10 grid grid-cols-3 gap-3">
         {tasks.map((task) => (
-          <div key={task.id} className="space-y-3 rounded-lg bg-[#ffef77] p-8">
-            <h5 className="text-4xl">{task.title}</h5>
-            <p>{task.description}</p>
-            <h5>Project: {task.project.title}</h5>
-          </div>
+          <Link href={`/tasks/${task.id}`} key={task.id}>
+            <a>
+              <div className="space-y-3 rounded-lg bg-[#ffef77] p-8">
+                <h5 className="text-4xl">{task.title}</h5>
+                <p>{task.description}</p>
+                <h3>{task.project.title}</h3>
+              </div>
+            </a>
+          </Link>
         ))}
       </div>
       <div className="my-10"></div>
@@ -40,4 +45,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default TasksPage

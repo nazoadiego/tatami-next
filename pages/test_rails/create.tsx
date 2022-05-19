@@ -10,7 +10,6 @@ const TestCreate: FC<TestCreateProps> = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault()
     const newTest = { title }
-    console.log(newTest)
 
     fetch('http://localhost:3000/tests', {
       method: 'POST',
