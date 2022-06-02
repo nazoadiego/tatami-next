@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { FC, FormEvent, useEffect, useState } from 'react'
+import Button from '../../components/Button'
 import type { Project } from '../../types/types'
 
 interface TaskCreateProps {}
@@ -67,7 +68,7 @@ const TaskCreate: FC<TaskCreateProps> = () => {
             </option>
           ))}
         </select>
-        <button className="rounded-lg bg-yellow-500 py-4 px-6">Add Task</button>
+        <Button>Add Task</Button>
       </div>
     </form>
   )
