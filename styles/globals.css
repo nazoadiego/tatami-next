@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+@layer components {
+  .input-field {
+    @apply rounded-sm py-1 px-2 text-black;
+  }
+}
 @tailwind utilities;

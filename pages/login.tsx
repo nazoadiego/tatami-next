@@ -1,4 +1,5 @@
-import { FC, useState } from 'react'
+import Link from 'next/link'
+import { FC, FormEvent, useState } from 'react'
 
 interface LoginPageProps {}
 
@@ -7,7 +8,7 @@ const LoginPage: FC<LoginPageProps> = () => {
   const [error, setError] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleSubmit = (e, email, password) => {
+  const handleSubmit = (e: FormEvent, email: string, password: string) => {
     e.preventDefault()
     const newLogin = { user: { email: email, password: password } }
 
@@ -31,16 +32,19 @@ const LoginPage: FC<LoginPageProps> = () => {
         type="text"
         placeholder="Enter email"
         onChange={(e) => setEmail(e.target.value)}
-        className="text-black"
+        className="input-field"
       />
       <label>Password</label>
       <input
         type="password"
         placeholder="Enter password"
         onChange={(e) => setPassword(e.target.value)}
-        className="text-black"
+        className="input-field"
       />
       <input type="submit" className="rounded-lg bg-yellow-400 px-6 py-4" />
+      <Link href="/registration">
+        <a>Sign Up</a>
+      </Link>
     </form>
   )
 }

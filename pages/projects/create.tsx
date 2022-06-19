@@ -31,7 +31,7 @@ const TaskCreate: FC<TaskCreateProps> = () => {
           required
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="text-black"
+          className="input-field"
         />
         <Button>Add Project</Button>
       </div>

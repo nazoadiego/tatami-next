@@ -94,20 +94,20 @@ const TaskShow: FC<TaskShowProps> = ({ task }) => {
                   required
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="text-black"
+                  className="input-field"
                 />
                 <label>Task Description:</label>
                 <textarea
                   required
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  className="text-black"
+                  className="input-field"
                 ></textarea>
                 <label>Task Project:</label>
                 <select
                   value={projectId}
                   onChange={(e) => setProjectId(Number(e.target.value))}
-                  className="text-black"
+                  className="input-field"
                 >
                   {projects.map((project) => (
                     <option key={project.id} value={project.id}>

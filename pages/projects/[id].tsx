@@ -109,7 +109,7 @@ const ProjectShow: FC<ProjectShowProps> = ({ project }) => {
                   required
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="text-black"
+                  className="input-field"
                 />
                 <Button>Update project</Button>
               </div>
@@ -134,14 +134,14 @@ const ProjectShow: FC<ProjectShowProps> = ({ project }) => {
                   required
                   value={taskTitle}
                   onChange={(e) => setTaskTitle(e.target.value)}
-                  className="text-black"
+                  className="input-field"
                 />
                 <label>Task Description:</label>
                 <textarea
                   required
                   value={taskDescription}
                   onChange={(e) => setTaskDescription(e.target.value)}
-                  className="text-black"
+                  className="input-field"
                 />
                 <Button>Create new task</Button>
               </div>
